@@ -1,0 +1,40 @@
+.btn {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	background: @primary;
+	padding: 0.55em 1.11em;
+	font-weight: normal;
+	border: none;
+	display: inline-block;
+	border-radius: 0;
+
+	@fontColor: #fff;
+
+	color: @fontColor;
+
+
+	&:link, &:visited, &:hover {
+		text-decoration: none;
+		color: @fontColor;
+	} 
+
+	&:hover {
+		background: @highlight;
+	}
+
+	&--big {
+		font-size: 2.2rem;
+	}
+}
+
+.imglink {
+	display: block;
+
+	img {
+		display: block;
+	}
+}
+
+.sidenote {
+	font-size: 1.4rem;
+}

@@ -1,0 +1,312 @@
+@media screen and (min-width: 768px) {
+	@site_padding: 4rem;
+
+	.site_header .container-fluid{
+		padding-left: @site_padding;
+		padding-right: @site_padding;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&:before, &:after {
+			display: none;
+		}
+	}
+
+	.site_logo {
+		margin-left: @site_padding;
+	}
+
+	.section_headline {
+		flex: 1 0 100%;
+		padding-left: 0;
+	}
+
+	.articles_featured_headline {
+		width: 100%;
+		text-align: center;
+	}
+
+	.articles_featured_button--left {
+		left: @site_padding;
+	}
+	.articles_featured_button--right {
+		right: @site_padding;
+	}
+
+	.nav_main {
+		align-self: center;
+		
+		&_toggle {
+			display: none;
+		}
+
+		ul {
+			.reset-list;
+			display: inline-flex;
+			margin-right: @site_padding;
+		}
+
+		li {
+			
+		}
+
+		a:link,a:visited {
+			color: @primary;
+		}
+
+		a:hover,a:active {
+			color: @highlight;
+		}
+	}
+
+	.navbar-collapse {
+		padding: 0;
+	}
+
+	.navbar > .container .navbar-brand, 
+	.navbar > .container-fluid .navbar-brand {
+		margin-left: 0;
+	}
+
+	.nav > li {
+		font-size: 1.8rem;
+		margin-left: 2.5rem;
+		&> a {
+			padding: 0;
+		}
+	}
+
+	.articles_latest {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		padding-left: @site_padding;
+		padding-right: @site_padding;
+
+		&_article {
+			flex: 1 0 50%;
+
+			&:nth-of-type(even) {
+				padding-left: 2.5rem;
+			}
+
+			&:nth-of-type(odd) {
+				padding-right: 2.5rem;
+			}
+		}
+
+
+		&_articlecontent {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.social_media  {
+		padding-left: @site_padding;
+		padding-right: @site_padding;
+	}
+
+	.newsletter_signup {
+
+		padding-left: @site_padding;
+		padding-right: @site_padding;
+
+		&_form {
+			display: flex;
+			flex-wrap: wrap;
+	    	align-items: flex-end;
+			
+			&_sidenote {
+				padding-bottom: 1rem;
+			}
+
+			&_form-item {
+				margin-right: 2.5rem;
+				margin-top: 0;
+				flex-grow:1 ;
+			}
+
+			&_btn {
+				flex-shrink: 0;
+				flex-basis: 100%;
+				flex-grow: 1;
+			}
+		}
+	}
+
+	.articles_popular {
+		padding: 0 @site_padding;
+
+		display: flex;
+		flex-wrap: wrap;
+
+		&_article {
+			flex-basis: 50%;
+			flex-grow: 0;
+			padding-right: 1.5rem;
+		}
+	}
+
+	.site_footer {
+		padding-left: @site_padding;
+		padding-right: @site_padding;
+		// display: flex;
+		// flex-wrap: wrap;
+
+		.col-sm-6:last-child {
+			clear: left;
+		}
+
+		.container-fluid {
+			padding: 0;
+		}
+
+		&_section {
+			// flex-basis: 50%;
+			// flex-grow: 1;
+			// padding-right: 2rem;
+			// order: 1;
+
+			// &:nth-of-type(2) {
+			// 	order: 3;
+			// }
+			// &:nth-of-type(3) {
+			// 	order: 2;
+			// }
+		}
+
+		&>p {
+			// order: 4;
+			// flex-basis: 100%;
+			// flex-shrink: 0;
+
+			br {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	@site_padding: 1.5rem;
+
+	.site_header {
+		padding-top: 3.5rem;
+		padding-bottom: 3.5rem;
+	}
+
+	.site_header .container-fluid{
+		display: block;
+	}
+
+	.site_logo {
+	    margin: 0px auto;
+	    width: 200px;
+	    height: 80px;
+	}
+
+	.navbar-nav {
+		display: flex;
+		justify-content: center;
+		margin-top: 2.5rem;
+		float: none;
+	}
+
+	.navbar-header {
+		float: none;
+	}
+
+	.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+		margin-left: auto;
+	}
+
+	.site_main.container-fluid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0 auto;
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+
+
+	.articles_featured  {
+		flex-basis: 697px;
+		order: 10;
+	}
+	.articles_latest  {
+
+		padding-left: 0;
+		padding-right: 0;
+		border: none;
+		order: 30;
+	}
+
+	.social_media  {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.newsletter_signup {
+		flex-basis: 320px;
+		padding-left:0;
+		padding-right:0;
+		order: 20;
+
+		&_form_sidenote {
+			margin-bottom: 2rem;
+			padding-bottom: 0;
+		}
+		&_form_forem-item {
+			margin-right: 0;
+		}
+	}
+
+	.articles_popular {
+		// max-width: 320px;
+		padding-left:0;
+		padding-right:0;
+		display: block;
+		order: 40;
+		flex-basis: 320px;
+		align-content: flex-start;
+	}
+
+	.site_footer {
+
+		.container-fluid {
+			padding: 0 @site_padding;
+		}
+
+		&_section {
+			padding-left: 2.5rem;
+			padding-right: 0;	
+
+			&:first-child {
+				padding-left: 0;
+				padding-right: 2.5rem;
+			}
+			&:last-child {
+				padding-left: 4.5rem;
+			}
+		}
+
+		.col-sm-6:last-child {
+			clear: none;
+		}
+
+		p.col-sm-12 {
+			padding-left: 0;
+		}
+
+
+
+	}
+
+	.site_main .col-md-4 {
+		padding-left: 5rem;
+	}
+}

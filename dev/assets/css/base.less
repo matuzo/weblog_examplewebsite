@@ -1,0 +1,68 @@
+/*
+  ____           _____ ______ 
+ |  _ \   /\    / ____|  ____|
+ | |_) | /  \  | (___ | |__   
+ |  _ < / /\ \  \___ \|  __|  
+ | |_) / ____ \ ____) | |____ 
+ |____/_/    \_\_____/|______|
+
+ */
+
+ *, *:before, *:after {
+ 	box-sizing: border-box;
+ }
+
+ html {
+ 	font-size: 62.5%;
+ }
+ 
+body {
+	margin: 0;
+	font-family: "Open Sans", Arial, sans-serif;
+
+	color: @primary;
+	font-size: 1.5rem;
+	line-height: 1.5;
+}
+
+label {
+	color: @dark;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 0.4rem;
+}
+
+input {
+	font-size: 16px;
+	padding: 1rem;
+	width: 100%;
+	// min-width: 29rem;
+	color: @primary;
+	background: @light;
+	border: 1px solid @primary;
+}
+
+button {
+	cursor: pointer;
+}
+
+a:link {
+	color: @highlight;
+	text-decoration: none;
+}
+
+a:visited, a:hover {
+	color: @highlight_sec;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+p a:link {
+	text-decoration: underline;
+}
+
+p {
+	margin-bottom: 2rem;
+}

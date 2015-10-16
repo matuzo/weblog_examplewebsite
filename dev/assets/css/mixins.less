@@ -1,0 +1,55 @@
+/* 
+ __  __ _______   _______ _   _  _____ 
+ |  \/  |_   _\ \ / /_   _| \ | |/ ____|
+ | \  / | | |  \ V /  | | |  \| | (___  
+ | |\/| | | |   > <   | | | . ` |\___ \ 
+ | |  | |_| |_ / . \ _| |_| |\  |____) |
+ |_|  |_|_____/_/ \_\_____|_| \_|_____/ 
+
+ */
+                                        
+.hide-element {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+.reset-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.text-replace(@image) {
+	background: url('@{imagePath}/@{image}') no-repeat center;
+	text-indent: -5555em;
+}
+
+.icon {
+	display: inline-block;
+	vertical-align: text-top;
+
+	&--small {
+		width: 18px;
+		height: 18px;
+	}
+	
+	&--calendar {
+		background: url('@{imagePath}/icon_calendar.png') no-repeat center;
+
+		&:hover {
+			background-image: url('@{imagePath}/icon_calendar_hover.png');
+		}
+	}	
+
+	&--comments{
+		background: url('@{imagePath}/icon_comments.png') no-repeat center;
+
+		&:hover {
+			background-image: url('@{imagePath}/icon_comments_hover.png');
+		}
+	}
+}
