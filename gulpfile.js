@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     livereload = require('gulp-livereload'),
     spritesmith = require('gulp.spritesmith'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    imageOptim = require('gulp-imageoptim');
 
 var assetPath = 'dev/assets/';
 
@@ -15,6 +16,12 @@ gulp.task('less', function() {
     }))
     // the task will output main.css in css
     .pipe(gulp.dest('dev/assets/css'))
+});
+
+gulp.task('imgopt', function() {
+    return gulp.src('dev/images_unopt/**/*')
+        .pipe(imageOptim.optimize())
+        .pipe(gulp.dest('dev/images'));
 });
 
 gulp.task('watch', function() {
