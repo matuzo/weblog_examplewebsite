@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     spritesmith = require('gulp.spritesmith'),
     autoprefixer = require('gulp-autoprefixer'),
     imageOptim = require('gulp-imageoptim'),
-    usemin = require('gulp-usemin');
+    usemin = require('gulp-usemin'),
+    uncss = require('gulp-uncss');
 
 var assetPath = 'dev/assets/';
 
@@ -36,7 +37,20 @@ gulp.task('copycssimages', function() {
     .pipe(gulp.dest('dist/assets/images_single'))
 });
 
-gulp.task('dist', ['usemin', 'copycssimages','imgopt']);
+gulp.task('copybootstrapfonts', function() {
+    return gulp.src('bower_components/bootstrap/fonts/*')
+    .pipe(gulp.dest('dist/assets/fonts'))
+});
+
+// ,'imgopt'
+gulp.task('dist', ['usemin', 'copycssimages','copybootstrapfonts'], function() {
+    return gulp.src('dist/assets/css/*.css')
+        .pipe(uncss({
+            html: ['dist/*.html'],
+            ignore: ['.formErrorContent', '.formErrorArrow', '.formError']
+        }))
+        .pipe(gulp.dest('dist/assets/css/'));
+});
 
 gulp.task('watch', function() {
     console.log("test")
