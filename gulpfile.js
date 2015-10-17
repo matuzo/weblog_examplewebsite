@@ -6,7 +6,13 @@ var gulp = require('gulp'),
     imageOptim = require('gulp-imageoptim'),
     usemin = require('gulp-usemin'),
     uncss = require('gulp-uncss'),
-    minifyCss = require('gulp-minify-css');
+    minifyCss = require('gulp-minify-css'),
+    path = require( 'path' ),
+    tmpDir = require('os').tmpdir(),
+    request = require('request'),
+    fs = require('fs'),
+    criticalcss = require("criticalcss"),
+    inline = require('gulp-inline');
 
 var assetPath = 'dev/assets/';
 
@@ -44,16 +50,47 @@ gulp.task('copybootstrapfonts', function() {
 });
 
 // ,'imgopt'
-gulp.task('dist', ['usemin', 'copycssimages','copybootstrapfonts'], function() {
-    return gulp.src('dist/assets/css/*.css')
-        .pipe(uncss({
-            html: ['dist/*.html'],
-            ignore: ['.formErrorContent', '.formErrorArrow', '.formError']
-        }))
-        .pipe(minifyCss({
-            keepSpecialComments: 0
-        }))
-        .pipe(gulp.dest('dist/assets/css/'));
+gulp.task('distcopy', ['usemin', 'copycssimages','copybootstrapfonts'], function() {
+  return gulp.src('dist/assets/css/style.css')
+    .pipe(uncss({
+      html: ['dist/*.html'],
+      ignore: [ '.formError','.formError .formErrorContent']
+    }))
+    .pipe(minifyCss({
+      keepSpecialComments: 0
+    }))
+    .pipe(gulp.dest('dist/assets/css/'));
+});
+
+gulp.task('criticalfile', ['distcopy'], function() {
+  var cssUrl = 'http://localhost/~matuzo/weblog_examplewebsite/dist/assets/css/style.css';
+  var cssPath = path.join( tmpDir, 'style.css' );
+ 
+  request(cssUrl).pipe(fs.createWriteStream(cssPath)).on('close', function() {
+    criticalcss.getRules(cssPath, function(err, output) {
+      if (err) {
+        throw new Error(err);
+      } else {
+        criticalcss.findCritical("http://localhost/~matuzo/weblog_examplewebsite/dist/", { height: 700, rules: JSON.parse(output), ignoreConsole: true}, function(err, output) {
+          if (err) {
+            throw new Error(err);
+          } else {
+            fs.writeFileSync( 'dist/assets/css/styles-critical.css', output );
+          }
+        });
+      }
+    });
+  });
+});
+
+gulp.task('dist', ['criticalfile'], function() {
+  gulp.src('dist/index.html')
+  .pipe(inline({
+    css: minifyCss(),
+    disabledTypes: ['svg', 'img', 'js'], // Only inline css files
+    ignore: ['../dist/assets/css/style.css']
+  }))
+  .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('watch', function() {
