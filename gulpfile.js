@@ -48,13 +48,18 @@ gulp.task('copycssimages', function() {
     .pipe(gulp.dest('dist/assets/images_single'))
 });
 
+gulp.task('copycssfonts', function() {
+    return gulp.src('dev/assets/fonts/*')
+    .pipe(gulp.dest('dist/assets/fonts'))
+});
+
 gulp.task('copybootstrapfonts', function() {
     return gulp.src('bower_components/bootstrap/fonts/*')
     .pipe(gulp.dest('dist/assets/fonts'))
 });
 
 // ,'imgopt'
-gulp.task('distcopy', ['usemin', 'copycssimages','copybootstrapfonts'], function() {
+gulp.task('distcopy', ['usemin', 'copycssimages','copybootstrapfonts', 'copycssfonts'], function() {
   return gulp.src('dist/assets/css/style.css')
     .pipe(uncss({
       html: ['dist/*.html'],
