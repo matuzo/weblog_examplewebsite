@@ -13,7 +13,8 @@ var gulp = require('gulp'),
     fs = require('fs'),
     criticalcss = require("criticalcss"),
     inline = require('gulp-inline'),
-    urlAdjuster = require('gulp-css-url-adjuster');
+    urlAdjuster = require('gulp-css-url-adjuster'),
+    uglify = require('gulp-uglify');
 
 var assetPath = 'dev/assets/';
 
@@ -36,7 +37,9 @@ gulp.task('imgopt', function() {
 
 gulp.task('usemin', function() {
   return gulp.src('dev/index.html')
-    .pipe(usemin())
+    .pipe(usemin({
+      js: []
+    }))
     .pipe(gulp.dest('dist/'));
 });
 
