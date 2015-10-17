@@ -38,7 +38,7 @@ gulp.task('imgopt', function() {
 gulp.task('usemin', function() {
   return gulp.src('dev/index.html')
     .pipe(usemin({
-      js: []
+      js: [uglify()]
     }))
     .pipe(gulp.dest('dist/'));
 });
