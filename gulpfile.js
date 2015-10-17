@@ -12,7 +12,8 @@ var gulp = require('gulp'),
     request = require('request'),
     fs = require('fs'),
     criticalcss = require("criticalcss"),
-    inline = require('gulp-inline');
+    inline = require('gulp-inline'),
+    urlAdjuster = require('gulp-css-url-adjuster');
 
 var assetPath = 'dev/assets/';
 
@@ -83,7 +84,15 @@ gulp.task('criticalfile', ['distcopy'], function() {
   });
 });
 
-gulp.task('dist', ['criticalfile'], function() {
+gulp.task('adjustInlinePaths', ['criticalfile'], function() {
+  return gulp.src('dist/assets/css/styles-critical.css')
+    .pipe(urlAdjuster({
+      replace: ['../images_single','assets/images_single'],
+    }))
+    .pipe(gulp.dest('dist/assets/css/inline'));
+})
+
+gulp.task('dist', ['adjustInlinePaths'], function() {
   gulp.src('dist/index.html')
   .pipe(inline({
     css: minifyCss(),
