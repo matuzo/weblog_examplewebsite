@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     imageOptim = require('gulp-imageoptim'),
     usemin = require('gulp-usemin'),
-    uncss = require('gulp-uncss');
+    uncss = require('gulp-uncss'),
+    minifyCss = require('gulp-minify-css');
 
 var assetPath = 'dev/assets/';
 
@@ -48,6 +49,9 @@ gulp.task('dist', ['usemin', 'copycssimages','copybootstrapfonts'], function() {
         .pipe(uncss({
             html: ['dist/*.html'],
             ignore: ['.formErrorContent', '.formErrorArrow', '.formError']
+        }))
+        .pipe(minifyCss({
+            keepSpecialComments: 0
         }))
         .pipe(gulp.dest('dist/assets/css/'));
 });
