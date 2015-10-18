@@ -64,79 +64,79 @@
   font-size: 1.4rem;
 }
 .icon-burger {
-  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/img_s/sprite.png);
   background-position: 0px -88px;
   width: 36px;
   height: 28px;
 }
 .icon-calendar {
-  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/img_s/sprite.png);
   background-position: -40px -88px;
   width: 15px;
   height: 16px;
 }
 .icon-calendar_hover {
-  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/img_s/sprite.png);
   background-position: -59px -88px;
   width: 15px;
   height: 16px;
 }
 .icon-comments {
-  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/img_s/sprite.png);
   background-position: -144px -100px;
   width: 18px;
   height: 16px;
 }
 .icon-comments_hover {
-  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/img_s/sprite.png);
   background-position: -144px -80px;
   width: 18px;
   height: 16px;
 }
 .icon-facebook {
-  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/img_s/sprite.png);
   background-position: -144px 0px;
   width: 19px;
   height: 36px;
 }
 .icon-facebook_hover {
-  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/img_s/sprite.png);
   background-position: -144px -40px;
   width: 19px;
   height: 36px;
 }
 .icon-github {
-  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/img_s/sprite.png);
   background-position: -48px 0px;
   width: 44px;
   height: 44px;
 }
 .icon-github_hover {
-  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/img_s/sprite.png);
   background-position: 0px 0px;
   width: 44px;
   height: 44px;
 }
 .icon-twitter {
-  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/img_s/sprite.png);
   background-position: -48px -48px;
   width: 44px;
   height: 36px;
 }
 .icon-twitter_hover {
-  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/img_s/sprite.png);
   background-position: 0px -48px;
   width: 44px;
   height: 36px;
 }
 .icon-youtube {
-  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/img_s/sprite.png);
   background-position: -96px -37px;
   width: 44px;
   height: 33px;
 }
 .icon-youtube_hover {
-  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/img_s/sprite.png);
   background-position: -96px 0px;
   width: 44px;
   height: 33px;
@@ -176,10 +176,12 @@ html {
 }
 body {
   margin: 0;
-  font-family: "Open Sans", Arial, sans-serif;
   color: #37505c;
   font-size: 1.5rem;
   line-height: 1.5;
+}
+.fonts-loaded body {
+  font-family: "Open Sans", Arial, sans-serif;
 }
 label {
   color: #113537;
@@ -269,7 +271,7 @@ p {
 .site_logo a {
   display: block;
   height: 100%;
-  background: url('http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/weblog_logo.svg') no-repeat center;
+  background: url('http://d2ni2dbq5i0wkn.cloudfront.net/weblog/img_s/weblog_logo.svg') no-repeat center;
   text-indent: -5555em;
   background-size: contain;
 }
@@ -354,10 +356,12 @@ p {
   padding: 0 1.5rem;
   margin: 0 0 1rem;
   line-height: 1.2;
-  font-family: 'Roboto Slab', serif;
 }
 .section_headline--no-padding {
   padding: 0;
+}
+.fonts-loaded .section_headline {
+  font-family: 'Roboto Slab', serif;
 }
 .articles_tag {
   text-transform: uppercase;

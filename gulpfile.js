@@ -63,7 +63,7 @@ gulp.task('distcopy', ['usemin', 'copycssimages','copybootstrapfonts', 'copycssf
   return gulp.src('dist/assets/css/style.css')
     .pipe(uncss({
       html: ['dist/*.html'],
-      ignore: [ '.formError','.formError .formErrorContent']
+      ignore: [ '.formError','.formError .formErrorContent', '.fonts-loaded body']
     }))
     .pipe(minifyCss({
       keepSpecialComments: 0
