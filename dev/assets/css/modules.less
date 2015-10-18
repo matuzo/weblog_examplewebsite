@@ -59,7 +59,9 @@
 		border: none;
 		width: 4rem;
 		height: 4rem;
-		.text-replace('Burger.png')
+		background-color: #fff;
+		text-indent: -5555em;
+		background-position: (@burger-offset-x + 4) (@burger-offset-y + 5px);
 	}
 
 	ul {
@@ -198,7 +200,7 @@
 	margin: 0 0 1rem;
 	line-height: 1.2;
 	font-family: 'Roboto Slab', serif;
-	
+
 
 	&--no-padding {
 		padding: 0;
@@ -271,14 +273,14 @@
 		margin-right: 1rem;
 		&:hover {
 			.icon--calendar {
-				background-image: url('@{imagePath}/icon_calendar_hover.png');
+				background-position: @calendar-hover-offset-x @calendar-hover-offset-y;
 			}
 		}
 	}
 
 	&_comments:hover {
 		.icon--comments {
-			background-image: url('@{imagePath}/icon_comments_hover.png');
+			background-position: @comments-hover-offset-x @comments-hover-offset-y;
 		}
 	}
 
@@ -374,48 +376,44 @@
 .nav_socialmedia {
 	.reset-list;
 	display: flex;
-	
+	align-items: center;
+
 	&_item {
-		flex-basis: 45px;
 		flex-shrink: 0;
-		height: 45px;
 		margin-right: 1.5rem;
 		text-indent: -5555em;
-		background-repeat: no-repeat;
-		background-position: center;
 
 		a {
 			display: block;
 			width: 100%;
 			height: 100%;
+
 		}
 
 		&--github {
-			background-image: url('../images_single/icon-github.png');
-
+			background-position: @github-offset-x @github-offset-y;
 			&:hover {
-				background-image: url('../images_single/icon-github_hover.png');
+				background-position: @github-hover-offset-x @github-hover-offset-y;
 			}
 		}
 		&--facebook {
-			background-image: url('../images_single/icon-facebook.png');
+			background-position: @facebook-offset-x @facebook-offset-y;
 
 			&:hover {
-				background-image: url('../images_single/icon-facebook_hover.png');
+				background-position: @facebook-hover-offset-x @facebook-hover-offset-y;
 			}
 		}
 		&--twitter {
-			background-image: url('../images_single/icon-twitter.png');
 
 			&:hover {
-				background-image: url('../images_single/icon-twitter_hover.png');
+				background-position: @twitter-hover-offset-x @twitter-hover-offset-y;
 			}
 		}
 		&--youtube {
-			background-image: url('../images_single/icon-youtube.png');
+			background-position: @youtube-offset-x @youtube-offset-y;
 
 			&:hover {
-				background-image: url('../images_single/icon-youtube_hover.png');
+				background-position: @youtube-hover-offset-x @youtube-hover-offset-y;
 			}
 		}
 	}

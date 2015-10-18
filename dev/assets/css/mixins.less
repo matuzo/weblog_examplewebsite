@@ -31,25 +31,13 @@
 .icon {
 	display: inline-block;
 	vertical-align: text-top;
-
-	&--small {
-		width: 18px;
-		height: 18px;
-	}
+	position: relative;
 	
 	&--calendar {
-		background: url('@{imagePath}/icon_calendar.png') no-repeat center;
-
-		&:hover {
-			background-image: url('@{imagePath}/icon_calendar_hover.png');
-		}
+		top: 2px;
 	}	
 
 	&--comments{
-		background: url('@{imagePath}/icon_comments.png') no-repeat center;
-
-		&:hover {
-			background-image: url('@{imagePath}/icon_comments_hover.png');
-		}
+		top: 2px;
 	}
 }

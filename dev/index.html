@@ -9,11 +9,12 @@
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
+	<link rel="stylesheet" href="../dist/assets/css/inline/styles-critical.css">
+
 	<script>!function(e){"use strict";e.loadCSS=function(t,n,r){var i,l=e.document,o=l.createElement("link");if(n)i=n;else{var a=(l.body||l.getElementsByTagName("head")[0]).childNodes;i=a[a.length-1]}var s=l.styleSheets;o.rel="stylesheet",o.href=t,o.media="only x",i.parentNode.insertBefore(o,n?i:i.nextSibling);var f=function(e){for(var t=o.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){f(e)})};return o.onloadcssdefined=f,f(function(){o.media=r||"all"}),o}}(this);
-	loadCSS('../dist/assets/css/style.css');
+		loadCSS('../dist/assets/css/style.css');
 	</script>
 
-	<link rel="stylesheet" href="../dist/assets/css/inline/styles-critical.css">
 
 	<noscript>
 		<!-- build:css ../dist/assets/css/style.css -->
@@ -32,34 +33,25 @@
 	<header class="site_header">
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="nav_main_toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				
-				<h1 class="site_logo navbar-brand"><a href="#">Weblog</a></h1>
+				<div class="navbar-header">
+					<button type="button" class="nav_main_toggle icon-burger collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+					</button>
+					
+					<h1 class="site_logo navbar-brand"><a href="#">Weblog</a></h1>
+				</div>
 
-			</div>
-
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				
-				<ul class="nav navbar-nav">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">Über Uns</a></li>
-					<li><a href="#">Kontakt</a></li>
-				</ul>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Über Uns</a></li>
+						<li><a href="#">Kontakt</a></li>
+					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
 	</header>
-
-
 
 	<main class="site_main container-fluid">
 		<div class="row">
@@ -68,59 +60,57 @@
 					<h2 class="hide-element">Besondere Artikel</h2>
 
 					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-						<!-- Indicators -->
 						<ol class="carousel-indicators">
 							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
 							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
 						</ol>
 
+						<ul class="carousel-inner articles_featured_articles" role="listbox" >
+							<li class="articles_featured_article item active">
+								<a href="#">
+									<h3 class="carousel-caption articles_featured_headline">Überall dieselbe alte Leier.</h3>
 
+									<picture>
+	  									<source type="image/webp" srcset="images/320/webp/bild1.webp 320w, 	images/768/webp/bild1.webp 768w">
+										<img src="images/320/bild1.png" srcset="images/768/bild1.png 768w" alt="">
+									</picture>
+								</a>
+							</li>
+							<li class="articles_featured_article item">
+								<a href="#">
+									<h3 class="carousel-caption articles_featured_headline">Überall dieselbe alte Leier.</h3>
+									<img src="images/320/bild2.gif" srcset="images/768/bild2.gif 768w" alt="">
+								</a>
+							</li>
+							<li class="articles_featured_article item">
+								<a href="#">
+									<h3 class="carousel-caption articles_featured_headline">Überall dieselbe alte Leier.</h3>
+									<picture>
+	  									<source type="image/webp" srcset="images/320/webp/bild3.webp 320w, 	images/768/webp/bild3.webp 768w">
+										<img src="images/320/bild3.jpg" srcset="images/768/bild3.jpg 768w" alt="">
+									</picture>
+								</a>
+							</li>
+						</ul>
 
-					<ul class="carousel-inner articles_featured_articles" role="listbox" >
-						<li class="articles_featured_article item active">
-							<a href="#">
-								<h3 class="carousel-caption articles_featured_headline">Überall dieselbe alte Leier.</h3>
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
 
-								<picture>
-  									<source type="image/webp" srcset="images/320/webp/bild1.webp 320w, 	images/768/webp/bild1.webp 768w">
-									<img src="images/320/bild1.png" srcset="images/768/bild1.png 768w" alt="">
-								</picture>
-							</a>
-						</li>
-						<li class="articles_featured_article item">
-							<a href="#">
-								<h3 class="carousel-caption articles_featured_headline">Überall dieselbe alte Leier.</h3>
-								<img src="images/320/bild2.gif" srcset="images/768/bild2.gif 768w" alt="">
-							</a>
-						</li>
-						<li class="articles_featured_article item">
-							<a href="#">
-								<h3 class="carousel-caption articles_featured_headline">Überall dieselbe alte Leier.</h3>
-								<picture>
-  									<source type="image/webp" srcset="images/320/webp/bild3.webp 320w, 	images/768/webp/bild3.webp 768w">
-									<img src="images/320/bild3.jpg" srcset="images/768/bild3.jpg 768w" alt="">
-								</picture>
-							</a>
-						</li>
-					</ul>
+						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
 
-					<!-- Controls -->
-					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
-
-					<ol class="carousel-indicators articles_featured_current-slide">
-						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-					</ol>
-					</div>
+						<ol class="carousel-indicators articles_featured_current-slide">
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol>
+					</div> <!-- .carousel -->
 
 				</section> <!-- .articles_featured -->
 
@@ -146,13 +136,13 @@
 
 							<time datetime="2015-09-24">
 								<a href="#" class="articles_latest_date">
-									<i class="icon icon--small icon--calendar"></i>
+									<i class="icon icon--small icon--calendar icon-calendar"></i>
 									24.09.2015
 								</a>
 							</time>
 
 							<a href="#" class="articles_latest_comments">
-								<i class="icon icon--small icon--comments"></i>
+								<i class="icon icon--small icon--comments icon-comments"></i>
 								5 Kommentare
 							</a>
 						</section>
@@ -163,7 +153,7 @@
 						<a href="#" class="imglink">
 							<picture>
   								<source type="image/webp" srcset="images/320/webp/bild5.webp 320w, images/768/webp/bild5.webp 768w">
-								<img src="images/320/bild5.png" srcset="images/768/bild5.png 768w"alt="Überall dieselbe alte Leier" />
+								<img src="images/320/bild5.png" srcset="images/768/bild5.png 768w" alt="Überall dieselbe alte Leier" />
 							</picture>
 						</a>
 
@@ -180,13 +170,13 @@
 
 							<time datetime="2015-09-24">
 								<a href="#" class="articles_latest_date">
-									<i class="icon icon--small icon--calendar"></i>
+									<i class="icon icon--small icon-calendar icon--calendar"></i>
 									24.09.2015
 								</a>
 							</time>
 
 							<a href="#" class="articles_latest_comments">
-								<i class="icon icon--small icon--comments"></i>
+								<i class="icon icon--small icon-comments icon--comments"></i>
 								5 Kommentare
 							</a>
 						</section>
@@ -197,7 +187,7 @@
 						<a href="#" class="imglink">
 							<picture>
   								<source type="image/webp" srcset="images/320/webp/bild7.webp 320w, images/768/webp/bild7.webp 768w">
-								<img src="images/320/bild7.jpg" srcset="images/768/bild7.jpg 768w"alt="Überall dieselbe alte Leier" />
+								<img src="images/320/bild7.jpg" srcset="images/768/bild7.jpg 768w" alt="Überall dieselbe alte Leier" />
 							</picture>
 						</a>
 
@@ -214,13 +204,13 @@
 
 							<time datetime="2015-09-24">
 								<a href="#" class="articles_latest_date">
-									<i class="icon icon--small icon--calendar"></i>
+									<i class="icon icon--small icon--calendar icon-calendar"></i>
 									24.09.2015
 								</a>
 							</time>
 
 							<a href="#" class="articles_latest_comments">
-								<i class="icon icon--small icon--comments"></i>
+								<i class="icon icon--small icon--comments icon-comments"></i>
 								5 Kommentare
 							</a>
 						</section>
@@ -230,7 +220,7 @@
 					<article class="articles_latest_article">
 						<a href="#" class="imglink">
 							<picture>
-								<source type="image/webp" srcset="images/320/webp/bild6.webp 320w, 	images/768/webp/bild6.webp 768w">
+								<source type="image/webp" srcset="images/320/webp/bild6.webp 320w, images/768/webp/bild6.webp 768w">
 								<img src="images/320/bild6.png" srcset="images/768/bild6.png 768w" alt="Überall dieselbe alte Leier" />
 							</picture>
 						</a>
@@ -248,13 +238,13 @@
 
 							<time datetime="2015-09-24">
 								<a href="#" class="articles_latest_date">
-									<i class="icon icon--small icon--calendar"></i>
+									<i class="icon icon--small icon--calendar icon-calendar"></i>
 									24.09.2015
 								</a>
 							</time>
 
 							<a href="#" class="articles_latest_comments">
-								<i class="icon icon--small icon--comments"></i>
+								<i class="icon icon--small icon--comments icon-comments"></i>
 								5 Kommentare
 							</a>
 						</section>
@@ -264,7 +254,7 @@
 					<article class="articles_latest_article articles_latest_article--hidden">
 						<a href="#" class="imglink">
 							<picture>
-								<source type="image/webp" srcset="images/320/webp/bild8.webp 320w, 	images/768/webp/bild8.webp 768w">
+								<source type="image/webp" srcset="images/320/webp/bild8.webp 320w, images/768/webp/bild8.webp 768w">
 								<img src="images/320/bild8.png" srcset="images/768/bild8.png 768w" alt="Überall dieselbe alte Leier" />
 							</picture>
 						</a>
@@ -282,13 +272,13 @@
 
 							<time datetime="2015-09-24">
 								<a href="#" class="articles_latest_date">
-									<i class="icon icon--small icon--calendar"></i>
+									<i class="icon icon--small icon--calendar icon-calendar"></i>
 									24.09.2015
 								</a>
 							</time>
 
 							<a href="#" class="articles_latest_comments">
-								<i class="icon icon--small icon--comments"></i>
+								<i class="icon icon--small icon--comments icon-comments"></i>
 								5 Kommentare
 							</a>
 						</section>
@@ -298,7 +288,7 @@
 					<article class="articles_latest_article articles_latest_article--hidden">
 						<a href="#" class="imglink">
 							<picture>
-								<source type="image/webp" srcset="images/320/webp/bild9.webp 320w, 	images/768/webp/bild9.webp 768w">
+								<source type="image/webp" srcset="images/320/webp/bild9.webp 320w, images/768/webp/bild9.webp 768w">
 								<img src="images/320/bild9.jpg" srcset="images/768/bild9.jpg 768w" alt="Überall dieselbe alte Leier" />
 							</picture>
 						</a>
@@ -316,13 +306,13 @@
 
 							<time datetime="2015-09-24">
 								<a href="#" class="articles_latest_date">
-									<i class="icon icon--small icon--calendar"></i>
+									<i class="icon icon--small icon--calendar icon-calendar"></i>
 									24.09.2015
 								</a>
 							</time>
 
 							<a href="#" class="articles_latest_comments">
-								<i class="icon icon--small icon--comments"></i>
+								<i class="icon icon--small icon--comments icon-comments"></i>
 								5 Kommentare
 							</a>
 						</section>
@@ -432,22 +422,22 @@
 					<h2 class="site_footer_headline">Weblog in den sozialen Medien</h2>
 
 					<ul class="nav_socialmedia">
-						<li class="nav_socialmedia_item nav_socialmedia_item--github">
+						<li class="nav_socialmedia_item nav_socialmedia_item--github icon-github">
 							<a href="#">
 								Weblog auf Github
 							</a>
 						</li>
-						<li class="nav_socialmedia_item nav_socialmedia_item--youtube">
+						<li class="nav_socialmedia_item nav_socialmedia_item--youtube icon-youtube">
 							<a href="#">
 								Weblog auf Youtube
 							</a>
 						</li>
-						<li class="nav_socialmedia_item nav_socialmedia_item--twitter">
+						<li class="nav_socialmedia_item nav_socialmedia_item--twitter icon-twitter">
 							<a href="#">
 								Weblog auf Twitter
 							</a>
 						</li>
-						<li class="nav_socialmedia_item nav_socialmedia_item--facebook">
+						<li class="nav_socialmedia_item nav_socialmedia_item--facebook icon-facebook">
 							<a href="#">
 								Weblog auf Facebook
 							</a>

@@ -23,22 +23,13 @@
 .icon {
   display: inline-block;
   vertical-align: text-top;
-}
-.icon--small {
-  width: 18px;
-  height: 18px;
+  position: relative;
 }
 .icon--calendar {
-  background: url('../images_single/icon_calendar.png') no-repeat center;
-}
-.icon--calendar:hover {
-  background-image: url('../images_single/icon_calendar_hover.png');
+  top: 2px;
 }
 .icon--comments {
-  background: url('../images_single/icon_comments.png') no-repeat center;
-}
-.icon--comments:hover {
-  background-image: url('../images_single/icon_comments_hover.png');
+  top: 2px;
 }
 .btn {
   font-size: 1.8rem;
@@ -71,6 +62,84 @@
 }
 .sidenote {
   font-size: 1.4rem;
+}
+.icon-burger {
+  background-image: url(images/sprite.png);
+  background-position: 0px -88px;
+  width: 36px;
+  height: 28px;
+}
+.icon-calendar {
+  background-image: url(images/sprite.png);
+  background-position: -40px -88px;
+  width: 15px;
+  height: 16px;
+}
+.icon-calendar_hover {
+  background-image: url(images/sprite.png);
+  background-position: -59px -88px;
+  width: 15px;
+  height: 16px;
+}
+.icon-comments {
+  background-image: url(images/sprite.png);
+  background-position: -144px -100px;
+  width: 18px;
+  height: 16px;
+}
+.icon-comments_hover {
+  background-image: url(images/sprite.png);
+  background-position: -144px -80px;
+  width: 18px;
+  height: 16px;
+}
+.icon-facebook {
+  background-image: url(images/sprite.png);
+  background-position: -144px 0px;
+  width: 19px;
+  height: 36px;
+}
+.icon-facebook_hover {
+  background-image: url(images/sprite.png);
+  background-position: -144px -40px;
+  width: 19px;
+  height: 36px;
+}
+.icon-github {
+  background-image: url(images/sprite.png);
+  background-position: -48px 0px;
+  width: 44px;
+  height: 44px;
+}
+.icon-github_hover {
+  background-image: url(images/sprite.png);
+  background-position: 0px 0px;
+  width: 44px;
+  height: 44px;
+}
+.icon-twitter {
+  background-image: url(images/sprite.png);
+  background-position: -48px -48px;
+  width: 44px;
+  height: 36px;
+}
+.icon-twitter_hover {
+  background-image: url(images/sprite.png);
+  background-position: 0px -48px;
+  width: 44px;
+  height: 36px;
+}
+.icon-youtube {
+  background-image: url(images/sprite.png);
+  background-position: -96px -37px;
+  width: 44px;
+  height: 33px;
+}
+.icon-youtube_hover {
+  background-image: url(images/sprite.png);
+  background-position: -96px 0px;
+  width: 44px;
+  height: 33px;
 }
 .container-fluid {
   max-width: 1120px;
@@ -200,7 +269,7 @@ p {
 .site_logo a {
   display: block;
   height: 100%;
-  background: url('../images_single/weblog_logo.svg') no-repeat center;
+  background: url('images/weblog_logo.svg') no-repeat center;
   text-indent: -5555em;
   background-size: contain;
 }
@@ -212,8 +281,9 @@ p {
   border: none;
   width: 4rem;
   height: 4rem;
-  background: url('../images_single/Burger.png') no-repeat center;
+  background-color: #fff;
   text-indent: -5555em;
+  background-position: 4px -83px;
 }
 .nav_main ul {
   display: none;
@@ -345,10 +415,10 @@ p {
   margin-right: 1rem;
 }
 .articles_latest_date:hover .icon--calendar {
-  background-image: url('../images_single/icon_calendar_hover.png');
+  background-position: -59px -88px;
 }
 .articles_latest_comments:hover .icon--comments {
-  background-image: url('../images_single/icon_comments_hover.png');
+  background-position: -144px -80px;
 }
 .articles_latest_loadmore {
   margin: 0;
@@ -429,19 +499,16 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .nav_socialmedia_item {
-  -webkit-flex-basis: 45px;
-      -ms-flex-preferred-size: 45px;
-          flex-basis: 45px;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
-  height: 45px;
   margin-right: 1.5rem;
   text-indent: -5555em;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .nav_socialmedia_item a {
   display: block;
@@ -449,28 +516,25 @@ p {
   height: 100%;
 }
 .nav_socialmedia_item--github {
-  background-image: url('../images_single/icon-github.png');
+  background-position: -48px 0px;
 }
 .nav_socialmedia_item--github:hover {
-  background-image: url('../images_single/icon-github_hover.png');
+  background-position: 0px 0px;
 }
 .nav_socialmedia_item--facebook {
-  background-image: url('../images_single/icon-facebook.png');
+  background-position: -144px 0px;
 }
 .nav_socialmedia_item--facebook:hover {
-  background-image: url('../images_single/icon-facebook_hover.png');
-}
-.nav_socialmedia_item--twitter {
-  background-image: url('../images_single/icon-twitter.png');
+  background-position: -144px -40px;
 }
 .nav_socialmedia_item--twitter:hover {
-  background-image: url('../images_single/icon-twitter_hover.png');
+  background-position: 0px -48px;
 }
 .nav_socialmedia_item--youtube {
-  background-image: url('../images_single/icon-youtube.png');
+  background-position: -96px -37px;
 }
 .nav_socialmedia_item--youtube:hover {
-  background-image: url('../images_single/icon-youtube_hover.png');
+  background-position: -96px 0px;
 }
 @media screen and (min-width: 768px) {
   .site_header .container-fluid {

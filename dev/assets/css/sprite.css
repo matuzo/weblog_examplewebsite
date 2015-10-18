@@ -1,0 +1,113 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+.icon-burger {
+  background-image: url(images/sprite.png);
+  background-position: -144px 0px;
+  width: 36px;
+  height: 28px;
+}
+.icon-calendar {
+  background-image: url(images/sprite.png);
+  background-position: -124px -88px;
+  width: 15px;
+  height: 16px;
+}
+.icon-calendar_hover {
+  background-image: url(images/sprite.png);
+  background-position: -124px -108px;
+  width: 15px;
+  height: 16px;
+}
+.icon-comments {
+  background-image: url(images/sprite.png);
+  background-position: 0px -133px;
+  width: 18px;
+  height: 16px;
+}
+.icon-comments_hover {
+  background-image: url(images/sprite.png);
+  background-position: -144px -112px;
+  width: 18px;
+  height: 16px;
+}
+.icon-facebook {
+  background-image: url(images/sprite.png);
+  background-position: -144px -32px;
+  width: 19px;
+  height: 36px;
+}
+.icon-facebook_hover {
+  background-image: url(images/sprite.png);
+  background-position: -144px -72px;
+  width: 19px;
+  height: 36px;
+}
+.icon-github {
+  background-image: url(images/sprite.png);
+  background-position: -48px 0px;
+  width: 44px;
+  height: 44px;
+}
+.icon-github_hover {
+  background-image: url(images/sprite.png);
+  background-position: 0px 0px;
+  width: 44px;
+  height: 44px;
+}
+.icon-left {
+  background-image: url(images/sprite.png);
+  background-position: -62px -88px;
+  width: 27px;
+  height: 41px;
+}
+.icon-left_hover {
+  background-image: url(images/sprite.png);
+  background-position: -93px -88px;
+  width: 27px;
+  height: 41px;
+}
+.icon-right {
+  background-image: url(images/sprite.png);
+  background-position: 0px -88px;
+  width: 27px;
+  height: 41px;
+}
+.icon-right_hover {
+  background-image: url(images/sprite.png);
+  background-position: -31px -88px;
+  width: 27px;
+  height: 41px;
+}
+.icon-twitter {
+  background-image: url(images/sprite.png);
+  background-position: -48px -48px;
+  width: 44px;
+  height: 36px;
+}
+.icon-twitter_hover {
+  background-image: url(images/sprite.png);
+  background-position: 0px -48px;
+  width: 44px;
+  height: 36px;
+}
+.icon-youtube {
+  background-image: url(images/sprite.png);
+  background-position: -96px 0px;
+  width: 44px;
+  height: 33px;
+}
+.icon-youtube_hover {
+  background-image: url(images/sprite.png);
+  background-position: -96px -37px;
+  width: 44px;
+  height: 33px;
+}

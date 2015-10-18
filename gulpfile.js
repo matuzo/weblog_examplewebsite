@@ -44,8 +44,8 @@ gulp.task('usemin', function() {
 });
 
 gulp.task('copycssimages', function() {
-    return gulp.src('dev/assets/images_single/*')
-    .pipe(gulp.dest('dist/assets/images_single'))
+    return gulp.src('dev/assets/css/images/*')
+    .pipe(gulp.dest('dist/assets/css/images'))
 });
 
 gulp.task('copycssfonts', function() {
@@ -80,7 +80,7 @@ gulp.task('criticalfile', ['distcopy'], function() {
       if (err) {
         throw new Error(err);
       } else {
-        criticalcss.findCritical("http://localhost/~matuzo/weblog_examplewebsite/dist/", { height: 700, rules: JSON.parse(output), ignoreConsole: true}, function(err, output) {
+        criticalcss.findCritical("http://localhost/~matuzo/weblog_examplewebsite/dist/", {  rules: JSON.parse(output), ignoreConsole: true}, function(err, output) {
           if (err) {
             throw new Error(err);
           } else {
@@ -95,7 +95,7 @@ gulp.task('criticalfile', ['distcopy'], function() {
 gulp.task('adjustInlinePaths', ['criticalfile'], function() {
   return gulp.src('dist/assets/css/styles-critical.css')
     .pipe(urlAdjuster({
-      replace: ['../images_single','assets/images_single'],
+      replace: ['images','assets/css/images'],
     }))
     .pipe(gulp.dest('dist/assets/css/inline'));
 })
@@ -103,7 +103,6 @@ gulp.task('adjustInlinePaths', ['criticalfile'], function() {
 gulp.task('dist', ['adjustInlinePaths'], function() {
   gulp.src('dist/index.html')
   .pipe(inline({
-    css: minifyCss(),
     disabledTypes: ['svg', 'img', 'js'], // Only inline css files
     ignore: ['../dist/assets/css/style.css']
   }))
@@ -119,12 +118,12 @@ gulp.task('watch', function() {
     livereload.listen();
    gulp.watch(assetPath+'**').on('change', livereload.changed);
 });
- 
- 
-// gulp.task('sprite', function () {
-//   var spriteData = gulp.src(assetPath+"images_single/*.*").pipe(spritesmith({
-//     imgName: 'sprite.png',
-//     cssName: 'sprite.css'
-//   }));
-//   return spriteData.pipe(gulp.dest(assetPath+'css/'));
-// });
+  
+gulp.task('sprite', function () {
+  var spriteData = gulp.src(assetPath+"images_single/*.*").pipe(spritesmith({
+    imgName: 'images/sprite.png',
+    cssName: 'sprite.less',
+    padding: 4
+  }));
+  return spriteData.pipe(gulp.dest(assetPath+'css/'));
+});

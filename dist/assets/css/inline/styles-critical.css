@@ -711,6 +711,42 @@ input {
   display: block;
 }
 
+.icon-burger {
+  background-image: url("assets/css/images/sprite.png");
+  width: 36px;
+  height: 28px;
+  background-position: 0px -88px;
+}
+
+.icon-facebook {
+  background-image: url("assets/css/images/sprite.png");
+  width: 19px;
+  height: 36px;
+  background-position: -144px 0px;
+}
+
+.icon-github,
+.icon-twitter,
+.icon-youtube {
+  background-image: url("assets/css/images/sprite.png");
+  width: 44px;
+}
+
+.icon-github {
+  height: 44px;
+  background-position: -48px 0px;
+}
+
+.icon-twitter {
+  height: 36px;
+  background-position: -48px -48px;
+}
+
+.icon-youtube {
+  height: 33px;
+  background-position: -96px -37px;
+}
+
 .container-fluid {
   max-width: 1120px;
 }
@@ -841,7 +877,7 @@ a:link {
 .site_logo a {
   display: block;
   height: 100%;
-  background-image: url("assets/images_single/weblog_logo.svg");
+  background-image: url("assets/css/images/weblog_logo.svg");
   background-attachment: initial;
   background-origin: initial;
   background-clip: initial;
@@ -864,14 +900,9 @@ a:link {
   border-color: initial;
   width: 4rem;
   height: 4rem;
-  background-image: url("assets/images_single/Burger.png");
-  background-attachment: initial;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: initial;
+  background-color: rgb(255, 255, 255);
   text-indent: -5555em;
-  background-position: 50% 50%;
-  background-repeat: no-repeat no-repeat;
+  background-position: 4px -83px;
 }
 
 .articles_featured_articles {
@@ -1014,6 +1045,13 @@ a:link {
   width: 100%;
 }
 
+.articles_latest_articlecontent {
+  padding-top: 1.4rem;
+  padding-right: 1rem;
+  padding-bottom: 1.4rem;
+  padding-left: 1rem;
+}
+
 .newsletter_signup,
 .social_media {
   border-bottom-width: 1px;
@@ -1119,11 +1157,8 @@ a:link {
 }
 
 .nav_socialmedia_item {
-  height: 45px;
   margin-right: 1.5rem;
   text-indent: -5555em;
-  background-position: 50% 50%;
-  background-repeat: no-repeat no-repeat;
 }
 
 .nav_socialmedia_item a {
@@ -1133,19 +1168,15 @@ a:link {
 }
 
 .nav_socialmedia_item--github {
-  background-image: url("assets/images_single/icon-github.png");
+  background-position: -48px 0px;
 }
 
 .nav_socialmedia_item--facebook {
-  background-image: url("assets/images_single/icon-facebook.png");
-}
-
-.nav_socialmedia_item--twitter {
-  background-image: url("assets/images_single/icon-twitter.png");
+  background-position: -144px 0px;
 }
 
 .nav_socialmedia_item--youtube {
-  background-image: url("assets/images_single/icon-youtube.png");
+  background-position: -96px -37px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1201,6 +1232,11 @@ a:link {
 
   .articles_latest_article:nth-of-type(odd) {
     padding-right: 2.5rem;
+  }
+
+  .articles_latest_articlecontent {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .newsletter_signup,

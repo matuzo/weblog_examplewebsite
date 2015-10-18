@@ -38,3 +38,14 @@
 .sidenote {
 	font-size: 1.4rem;
 }
+
+.sprites(@spritesheet-sprites, @i: 1) when (@i <= length(@spritesheet-sprites)) {
+  @sprite: extract(@spritesheet-sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .icon-@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@spritesheet-sprites, @i + 1);
+}
+
+.sprites(@spritesheet-sprites);
