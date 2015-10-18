@@ -64,79 +64,79 @@
   font-size: 1.4rem;
 }
 .icon-burger {
-  background-image: url(images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
   background-position: 0px -88px;
   width: 36px;
   height: 28px;
 }
 .icon-calendar {
-  background-image: url(images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
   background-position: -40px -88px;
   width: 15px;
   height: 16px;
 }
 .icon-calendar_hover {
-  background-image: url(images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
   background-position: -59px -88px;
   width: 15px;
   height: 16px;
 }
 .icon-comments {
-  background-image: url(images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
   background-position: -144px -100px;
   width: 18px;
   height: 16px;
 }
 .icon-comments_hover {
-  background-image: url(images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
   background-position: -144px -80px;
   width: 18px;
   height: 16px;
 }
 .icon-facebook {
-  background-image: url(images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
   background-position: -144px 0px;
   width: 19px;
   height: 36px;
 }
 .icon-facebook_hover {
-  background-image: url(images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
   background-position: -144px -40px;
   width: 19px;
   height: 36px;
 }
 .icon-github {
-  background-image: url(images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
   background-position: -48px 0px;
   width: 44px;
   height: 44px;
 }
 .icon-github_hover {
-  background-image: url(images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
   background-position: 0px 0px;
   width: 44px;
   height: 44px;
 }
 .icon-twitter {
-  background-image: url(images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
   background-position: -48px -48px;
   width: 44px;
   height: 36px;
 }
 .icon-twitter_hover {
-  background-image: url(images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
   background-position: 0px -48px;
   width: 44px;
   height: 36px;
 }
 .icon-youtube {
-  background-image: url(images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
   background-position: -96px -37px;
   width: 44px;
   height: 33px;
 }
 .icon-youtube_hover {
-  background-image: url(images/sprite.png);
+  background-image: url(http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/sprite.png);
   background-position: -96px 0px;
   width: 44px;
   height: 33px;
@@ -217,19 +217,19 @@ p {
 }
 @font-face {
   font-family: 'Roboto Slab';
-  src: url('../fonts/robotoslab-regular-webfont-webfont.woff2') format('woff2'), url('../fonts/robotoslab-regular-webfont-webfont.woff') format('woff');
+  src: url('http://d2ni2dbq5i0wkn.cloudfront.net/weblog/fonts/robotoslab-regular-webfont-webfont.woff2') format('woff2'), url('http://d2ni2dbq5i0wkn.cloudfront.net/weblog/fonts/robotoslab-regular-webfont-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'), url('../fonts/opensans-regular-webfont.woff') format('woff');
+  src: url('http://d2ni2dbq5i0wkn.cloudfront.net/weblog/fonts/opensans-regular-webfont.woff2') format('woff2'), url('http://d2ni2dbq5i0wkn.cloudfront.net/weblog/fonts/opensans-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Open Sans Semibold';
-  src: url('../fonts/opensans-semibold-webfont.woff2') format('woff2'), url('../fonts/opensans-semibold-webfont.woff') format('woff');
+  src: url('http://d2ni2dbq5i0wkn.cloudfront.net/weblog/fonts/opensans-semibold-webfont.woff2') format('woff2'), url('http://d2ni2dbq5i0wkn.cloudfront.net/weblog/fonts/opensans-semibold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -269,7 +269,7 @@ p {
 .site_logo a {
   display: block;
   height: 100%;
-  background: url('images/weblog_logo.svg') no-repeat center;
+  background: url('http://d2ni2dbq5i0wkn.cloudfront.net/weblog/images/weblog_logo.svg') no-repeat center;
   text-indent: -5555em;
   background-size: contain;
 }

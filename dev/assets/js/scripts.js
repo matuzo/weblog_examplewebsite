@@ -15,5 +15,4 @@ Promise
     .all([fontA.check()])
     .then(function(){
         document.documentElement.className += "fonts-loaded";
-        console.log
     });

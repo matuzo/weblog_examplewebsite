@@ -94,9 +94,10 @@ gulp.task('criticalfile', ['distcopy'], function() {
 
 gulp.task('adjustInlinePaths', ['criticalfile'], function() {
   return gulp.src('dist/assets/css/styles-critical.css')
-    .pipe(urlAdjuster({
-      replace: ['images','assets/css/images'],
-    }))
+    // .pipe(urlAdjuster({
+    //   replace: ['images','assets/css/images'],
+    // }))
+    .pipe(minifyCss())
     .pipe(gulp.dest('dist/assets/css/inline'));
 })
 
