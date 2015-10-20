@@ -63,7 +63,7 @@ gulp.task('distcopy', ['usemin', 'copycssimages','copybootstrapfonts', 'copycssf
   return gulp.src('dist/assets/css/style.css')
     .pipe(uncss({
       html: ['dist/*.html'],
-      ignore: [ '.formError','.formError .formErrorContent', '.fonts-loaded body']
+      ignore: [ '.formError','.formError .formErrorContent', '.fonts-loaded body', '.carousel-inner > .item', '.carousel-inner > .item.next', '.carousel-inner > .item.active.right', '.carousel-inner > .item.prev', '.carousel-inner > .item.active.left', '.carousel-inner > .item.next.left', '.carousel-inner > .item.prev.right', '.carousel-inner > .item.active','.carousel-inner > .active','.carousel-inner > .next','.carousel-inner > .prev','.carousel-inner > .next.left','.carousel-inner > .prev.right','.carousel-inner > .active.left','.carousel-inner > .active.right']
     }))
     .pipe(minifyCss({
       keepSpecialComments: 0
@@ -94,9 +94,9 @@ gulp.task('criticalfile', ['distcopy'], function() {
 
 gulp.task('adjustInlinePaths', ['criticalfile'], function() {
   return gulp.src('dist/assets/css/styles-critical.css')
-    // .pipe(urlAdjuster({
-    //   replace: ['images','assets/css/images'],
-    // }))
+    .pipe(urlAdjuster({
+      replace: ['images','assets/css/images'],
+    }))
     .pipe(minifyCss())
     .pipe(gulp.dest('dist/assets/css/inline'));
 })
